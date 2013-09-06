@@ -24,12 +24,12 @@ public class Unity4ResolutionHelper : MonoBehaviour
 	void OnApplicationQuit()
 	{
 		RegistryKey key = Registry.CurrentUser;
-        key = key.OpenSubKey("Software" + @"\" + playerSettingsCompanyName + @"\" + playerSettingsProductName, true);
-        key.DeleteValue("Screenmanager Is Fullscreen mode_h3981298716", false);
+		key = key.OpenSubKey("Software" + @"\" + playerSettingsCompanyName + @"\" + playerSettingsProductName, true);
+		key.DeleteValue("Screenmanager Is Fullscreen mode_h3981298716", false);
 		key.DeleteValue("Screenmanager Resolution Height_h2627697771", false);
 		key.DeleteValue("Screenmanager Resolution Width_h182942802", false);
 		key.DeleteValue("UnityGraphicsQuality_h1669003810", false);
-        key.Close();
+		key.Close();
 	}
 #endif
 }
